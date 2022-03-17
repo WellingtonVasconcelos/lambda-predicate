@@ -20,8 +20,10 @@ public class Program {
 		list.add(new Product("Tablet", 350.50));
 		list.add(new Product("HD Case", 80.90));
 		
-		//Expressão lambda declarada
-		Predicate<Product> pred = p ->p.getPrice() >= 100.0;
+		Double min = 100.0;
+		
+		//Expressão lambda declarada pegando o valor de variável
+		Predicate<Product> pred = p ->p.getPrice() >= min;
 		
 		list.removeIf(pred);
 		
